@@ -10,7 +10,7 @@
     "start": "node server.js",
     "dev": "nodemon server.js",
     "train": "nodemon train.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specifi ed\" && exit 1"
   },
   "dependencies": {
     "ejs": "^6.0.1",

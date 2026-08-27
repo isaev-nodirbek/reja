@@ -1,0 +1,43 @@
+{
+  "name": "Nolan",
+  "Age": 25,
+  "Profession": "Software Engineer",
+  "Residence": "S.Korea",
+  "Adress": "S.Korea, Busan",
+  "Langauage": ["Uzbek", "Korean", "English"],
+  "Skills": [
+    "Bootstrap, Materialize",
+    "Styling, Sass, Less",
+    "Django, Flask",
+    "GIT Knowledge"
+  ],
+  "work_place": "IT Company",
+  "sercive_desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. velit officia consequate",
+  "about_me": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit dolore repellat quas beatae aperiam adipisci omnis. Odio nostrum exercitationem ex?",
+  "City": "Sherabad",
+  "title": ["Flower", "Seedlings", "Garden", "Old", "New"],
+  "flower_desc": ["What isa Flower?", "What is a Seeding?", "Who is Gardner"],
+  "flower_name": [
+    "Tulip",
+    "Daffodil",
+    "Poppy",
+    "Bluebell",
+    "Rose",
+    "Snowdrop",
+    "Cherry",
+    "blossom"
+  ],
+  "flower_price": [
+    "15$",
+    "25$",
+    "12$",
+    "20$",
+    "25$",
+    "30$",
+    "22$",
+    "19$",
+    "9$"
+  ],
+  "famous_words": ["World is Beautiful with Flowers"],
+  "famous_name": ["Steve Jobs"]
+}

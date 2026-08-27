@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    />
+    <link rel="stylesheet" href="/main.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="frame">
+      <div class="main_frame">
+        <div class="left_frame">
+          <div class="left_1">
+            <div class="profile_img">
+              <img src="/Images/profile_image/Profile.jpg" alt="Profile" />
+            </div>
+            <div class="name">
+              <strong><%= user.name%></strong>
+
+              <p><%= user.Profession%></p>
+            </div>
+
+            <div class="social_networks">
+              <a href=""><img src="/Images/icons/Facebook.jpg" alt="" /></a>
+              <a href=""><img src="/Images/icons/Instagram.jpg" alt="" /></a>
+              <a href=""><img src="/Images/icons/Twitter.jpg" alt="" /></a>
+              <a href=""><img src="/Images/icons/Linkeding.jpg" alt="" /></a>
+              <a href=""><img src="/Images/icons/Youtube.jpg" alt="" /></a>
+              <div>
+                <a href=""><img src="/Images/icons/Dribbble.jpg" alt="" /></a>
+              </div>
+            </div>
+          </div>
+          <div class="marginer"></div>
+          <div class="left_2">
+            <div class="age">
+              <span>Age:</span>
+              <strong><%= user.Age%></strong>
+            </div>
+            <div class="residence">
+              <span>Residence:</span>
+              <strong><%= user.Residence%></strong>
+            </div>
+            <div class="freelance">
+              <span>Freelance:</span>
+              <p>Available</p>
+            </div>
+            <div class="address">
+              <span>Address:</span>
+              <strong><%= user.Adress%></strong>
+            </div>
+          </div>
+          <div class="marginer"></div>
+          <div class="left_3">
+            <div class="language">
+              <strong>Langauges</strong>
+            </div>
+
+            <div class="skill"><span><%= user.Langauage[0]%></span>100%</div>
+            <div class="progress">
+              <div class="progress_in"></div>
+            </div>
+            <div class="skill"><span><%= user.Langauage[2]%></span>80%</div>
+            <div class="progress">
+              <div class="progress_in2"></div>
+            </div>
+            <div class="skill"><span><%= user.Langauage[1]%></span>60%</div>
+            <div class="progress">
+              <div class="progress_in3"></div>
+            </div>
+          </div>
+          <div class="marginer"></div>
+
+          <div class="left_4">
+            <div class="language">
+              <strong>Skills</strong>
+            </div>
+
+            <div class="skill"><span>Html</span>90%</div>
+            <div class="progress">
+              <div class="progress_inA"></div>
+            </div>
+            <div class="skill"><span>CSS</span>85%</div>
+            <div class="progress">
+              <div class="progress_inB"></div>
+            </div>
+            <div class="skill"><span>Js</span>80%</div>
+            <div class="progress">
+              <div class="progress_inC"></div>
+            </div>
+            <div class="skill"><span>PHP</span>75%</div>
+            <div class="progress">
+              <div class="progress_inD"></div>
+            </div>
+            <div class="skill"><span>WordPress</span>85%</div>
+            <div class="progress">
+              <div class="progress_inF"></div>
+            </div>
+          </div>
+          <div class="marginer"></div>
+          <div class="left_5">
+            <div class="language">
+              <strong>Extra Skills</strong>
+            </div>
+            <div class="extra_skills">
+              <img src="Images/icons/Icons.png" alt="" />
+              <p><%= user.Skills [(0)]%></p>
+            </div>
+            <div class="extra_skills">
+              <img src="Images/icons/Icons.png" alt="" />
+              <p><%= user.Skills [(1)]%></p>
+            </div>
+            <div class="extra_skills">
+              <img src="Images/icons/Icons.png" alt="" />
+              <p><%= user.Skills [(2)]%></p>
+            </div>
+            <div class="extra_skills">
+              <img src="Images/icons/Icons.png" alt="" />
+              <p><%= user.Skills [(3)]%></p>
+            </div>
+          </div>
+          <div class="marginer"></div>
+        </div>
+
+        <div class="midd_frame">
+          <div class="profile_wrapper">
+            <img src="Images/profile_image/Your Image 1.png" alt="" />
+
+            <div class="shape_images">
+              <div class="shape_1">
+                <img src="Images/profile_image/Ellipse 15.svg" alt="" />
+              </div>
+
+              <div class="shape_2">
+                <img src="Images/profile_image/Ellipse 16.svg" alt="" />
+              </div>
+
+              <div class="shape_3">
+                <img src="Images/profile_image/Rectangle 52.svg" alt="" />
+              </div>
+
+              <div class="shape_4">
+                <img src="Images/profile_image/Ellipse 16.svg" alt="" />
+              </div>
+
+              <div class="shape_5">
+                <img src="Images/profile_image/Rectangle 51.png" alt="" />
+              </div>
+
+              <div class="shape_6">
+                <img src="Images/profile_image/Ellipse 15.svg" alt="" />
+              </div>
+
+              <div class="shape_7">
+                <img src="Images/profile_image/Polygon 1.svg" alt="" />
+              </div>
+            </div>
+
+            <div class="profile_info">
+              <strong> Software Engineer in <%= user.Adress%> </strong>
+            </div>
+
+            <div class="profile_info2">
+              <span
+                >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Excepturi ex molestias dolorum omnis eum porro quo voluptatem
+                magni tempore tenetur.</span
+              >
+            </div>
+
+            <div class="hire_btn">
+              <button>HIRE ME -></button>
+            </div>
+          </div>
+
+          <div class="services_wrapper">
+            <div>
+              <strong>My Services</strong>
+              <span
+                >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est
+                voluptate sunt dolore facere aspernatur nisi rerum? Eius animi
+                voluptas voluptatum odit obcaecati quam!</span
+              >
+            </div>
+          </div>
+
+          <div class="service_box">
+            <div class="service_boxes">
+              <img src="Images/btn_icon/coding.jpg" alt="" />
+              <strong>Web Development</strong>
+              <span>blog, e-commerce</span>
+            </div>
+            <div class="service_boxes">
+              <img src="Images/btn_icon/illisturation.png" alt="" />
+              <strong>UI/UX Design</strong>
+              <span>Mobile app, website design</span>
+            </div>
+            <div class="service_boxes">
+              <img src="Images/btn_icon/microphone.png" alt="" />
+              <strong>Sound Design</strong>
+              <span>Voice Over, Beat Making</span>
+            </div>
+            <div class="service_boxes">
+              <img src="Images/btn_icon/development.png" alt="" />
+              <strong>game design</strong>
+              <span>Character Design, Props & Objects</span>
+            </div>
+            <div class="service_boxes">
+              <img src="Images/btn_icon/photographer.png" alt="" />
+              <strong>photography</strong>
+              <span>portrait, product photography</span>
+            </div>
+            <div class="service_boxes">
+              <strong>advertising</strong>
+              <div class="advertising_box">
+                <span
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vitae nulla diam in ac dictum a urna viverra morbi.
+                </span>
+                <button>ORDER NOW ></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right_frame">
+          <div class="right_frame_in">
+            <div class="first_icon">
+              <img src="Images/icons/Contrast.png" alt="" />
+            </div>
+            <div class="right_icons">
+              <div class="icon-btn">
+                <img src="Images/icons/Pop up.png" alt="" />
+              </div>
+              <div class="icon_btn">
+                <img src="Images/icons/Home.png" alt="" />
+              </div>
+              <div class="icon_btn">
+                <img src="Images/icons/Service.png" alt="" />
+              </div>
+              <div class="icon_btn">
+                <img src="Images/icons/Cv.png" alt="" />
+              </div>
+              <div class="icon_btn">
+                <img src="Images/icons/Portfolio.png" alt="" />
+              </div>
+              <div class="icon_btn">
+                <img src="Images/icons/Blog.png" alt="" />
+              </div>
+              <div class="icon_btn">
+                <img src="Images/icons/Contact.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

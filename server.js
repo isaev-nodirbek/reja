@@ -2,6 +2,16 @@ console.log("Web Serverni boshlash");
 const express = require("express");
 const app = express();
 const http = require("http");
+const fs = require("fs");
+
+let user;
+fs.readFile("database/user.json", "utf8", (err, data) => {
+  if (err) {
+    console.log("ERROR: ", err);
+  } else {
+    user = JSON.parse(data);
+  }
+});
 
 // 1 Kirish code
 app.use(express.static("public"));
@@ -19,17 +29,13 @@ app.post("/create-item", (req, res) => {
   console.log(req.body);
   res.json({ test: "success" });
 });
-// app.get("/hello", function (req, res) {
-//   res.end("<h1>HELLO WORLD</h1>");
-// });
-// app.get("/gift", function (req, res) {
-//   res.end("<h1>You are in gifts page</h1>");
-// });
+
 app.get("/", function (req, res) {
-  res.render("harid");
+  res.render("portfolio", { user: user });
 });
+
 const server = http.createServer(app);
-let PORT = 8080;
+let PORT = 4000;
 server.listen(PORT, function () {
   console.log(`The serevr is running successfully on port: ${PORT}`);
 });
