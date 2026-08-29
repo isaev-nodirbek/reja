@@ -1,3 +1,24 @@
+// TASK - A
+// Harf sifatida kiritilgan birinchi parametr,
+// kiritilgan ikkinchi parametr tarkibida nechta ekanligini qaytaruvchi
+// Funktsiya tuzing
+
+// Masalan: countLetter("e", "engineer")
+// 'engineer' so'zi tarkibida 'e' harfi 3 marotaba takrorlanganligi uchun
+// 3 sonini qaytaradi
+
+function countLetter(letter, word) {
+  let count = 0;
+  for (let a = 0; a < word.length; a++) {
+    if (word[a] === letter) {
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log(countLetter("e", "engineer"));
+
 // NodeJS event loop and Callback functions
 /* There are 2 types of backend langauges
   
@@ -8,36 +29,36 @@
 
   */
 
-console.log("Advices by Jack Ma");
-const list = [
-  "Be a good Student", // 0-20
-  "Choose the right boss and make more mistakes", // 20-30
-  "Start your own business", //30-40
-  "Do  what  You are good at", //40-50
-  "Make investment on Youth", //50-60
-  "Take a rest, There is no point", // 60
-];
+// console.log("Advices by Jack Ma");
+// const list = [
+//   "Be a good Student", // 0-20
+//   "Choose the right boss and make more mistakes", // 20-30
+//   "Start your own business", //30-40
+//   "Do  what  You are good at", //40-50
+//   "Make investment on Youth", //50-60
+//   "Take a rest, There is no point", // 60
+// ];
 
 // CALLBACK function
-function giveAdvice(a, callback) {
-  if (typeof a !== "number") callback("Insert Number", null);
-  else if (a <= 20) callback(null, list[0]);
-  else if (a > 20 && a <= 30) callback(null, list[1]);
-  else if (a > 30 && a <= 40) callback(null, list[2]);
-  else if (a > 40 && a <= 50) callback(null, list[3]);
-  else if (a > 50 && a <= 60) callback(null, list[4]);
-  else {
-    setInterval(function () {
-      callback(null, list[5]);
-    }, 1000);
-  }
-}
-console.log("passed here 0");
-giveAdvice(65, (err, data) => {
-  if (err) console.log("ERROR:", err);
-  console.log("Answer: ", data);
-});
-console.log("passed here 1");
+// function giveAdvice(a, callback) {
+//   if (typeof a !== "number") callback("Insert Number", null);
+//   else if (a <= 20) callback(null, list[0]);
+//   else if (a > 20 && a <= 30) callback(null, list[1]);
+//   else if (a > 30 && a <= 40) callback(null, list[2]);
+//   else if (a > 40 && a <= 50) callback(null, list[3]);
+//   else if (a > 50 && a <= 60) callback(null, list[4]);
+//   else {
+//     setInterval(function () {
+//       callback(null, list[5]);
+//     }, 1000);
+//   }
+// }
+// console.log("passed here 0");
+// giveAdvice(65, (err, data) => {
+//   if (err) console.log("ERROR:", err);
+//   console.log("Answer: ", data);
+// });
+// console.log("passed here 1");
 
 // ASYNC function Bu synchronous function dan keyin ishga tushadi JavaScript da .
 // async function giveAdvice(a) {
