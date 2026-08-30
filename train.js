@@ -1,3 +1,22 @@
+// TASK - B
+/*
+Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
+MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+*/
+
+function countDigits(str) {
+  let number = 0;
+  for (let a = 0; a < str.length; a++) {
+    if (str[a] >= "0" && str[a] <= "9") {
+      number++;
+    }
+  }
+  return number;
+}
+
+const answer = countDigits("ad2a54y79wet0sfgb9");
+console.log("Answer: ", answer);
+
 // TASK - A
 // Harf sifatida kiritilgan birinchi parametr,
 // kiritilgan ikkinchi parametr tarkibida nechta ekanligini qaytaruvchi
@@ -7,17 +26,19 @@
 // 'engineer' so'zi tarkibida 'e' harfi 3 marotaba takrorlanganligi uchun
 // 3 sonini qaytaradi
 
-function countLetter(letter, word) {
-  let count = 0;
-  for (let a = 0; a < word.length; a++) {
-    if (word[a] === letter) {
-      count++;
-    }
-  }
-  return count;
-}
+// function countLetter(letter, word) {
+//   let count = 0;
+//   for (let a = 0; a < word.length; a++) {
+//     if (word[a] === letter) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
 
-console.log(countLetter("e", "engineer"));
+// console.log(countLetter("e", "engineer"));
+
+// console.log(countArguments("", [], "ball", "7", 6, {}));
 
 // NodeJS event loop and Callback functions
 /* There are 2 types of backend langauges
