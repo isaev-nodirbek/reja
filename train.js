@@ -4,17 +4,17 @@ Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda
 MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
 */
 
-function countDigits(str) {
+function countDigits(string) {
   let number = 0;
-  for (let a = 0; a < str.length; a++) {
-    if (str[a] >= "0" && str[a] <= "9") {
+  for (let a = 0; a < string.length; a++) {
+    if (string[a] >= "0" && string[a] <= "9") {
       number++;
     }
   }
   return number;
 }
 
-const answer = countDigits("ad2a54y79wet0sfgb9");
+const answer = countDigits("jfbhsvfhjsv34h3ouyruegifgyid");
 console.log("Answer: ", answer);
 
 // TASK - A
