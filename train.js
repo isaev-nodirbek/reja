@@ -30,6 +30,7 @@ class Shop {
     } else {
       console.log("Product not found");
     }
+    this.qoldiq();
     const now = new Date();
     const time = moment(now).format("HH:mm");
     console.log(`At ${time}, ${quantity} ${product} sold.`);
@@ -48,14 +49,13 @@ class Shop {
     const now = new Date();
     const time = moment(now).format("HH:mm");
     console.log(`At ${time}, ${quantity} ${product} received.`);
+    this.qoldiq();
   }
 }
 
 const shop = new Shop(10, 5, 2);
-shop.qoldiq();
-shop.sell("bread", 4);
+//shop.sell("bread", 3);
 shop.receive("cola", 4);
-shop.qoldiq();
 
 // function countDigits(string) {
 //   let number = 0;
