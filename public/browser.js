@@ -40,7 +40,7 @@ document.addEventListener("click", function (e) {
   if (e.target.classList.contains("delete-me")) {
     if (confirm("Are you sure to delete this item?")) {
       axios
-        .post("/delet-item", { id: e.target.getAttribute("data-id") })
+        .post("/delete-item", { id: e.target.getAttribute("data-id") })
         .then((response) => {
           console.log(response.data);
           e.target.parentElement.parentElement.remove();

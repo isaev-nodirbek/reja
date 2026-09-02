@@ -30,7 +30,7 @@ app.set("view engine", "ejs");
 // 4 Routing code
 app.post("/create-item", (req, res) => {
   console.log("user entered /create-item");
-  console.log(req.body);
+
   const new_reja = req.body.reja;
   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
     console.log(data.ops);
@@ -38,7 +38,7 @@ app.post("/create-item", (req, res) => {
   });
 });
 
-app.post("/delet-item", (req, res) => {
+app.post("/delete-item", (req, res) => {
   const id = req.body.id;
   db.collection("plans").deleteOne(
     { _id: new mongodb.ObjectId(id) },
