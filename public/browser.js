@@ -33,3 +33,26 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
       console.log("Please try AGAIN");
     });
 });
+
+document.addEventListener("click", function (e) {
+  // delete operation
+  console.log(e.target);
+  if (e.target.classList.contains("delete-me")) {
+    if (confirm("Are you sure to delete this item?")) {
+      axios
+        .post("/delet-item", { id: e.target.getAttribute("data-id") })
+        .then((response) => {
+          console.log(response.data);
+          e.target.parentElement.parentElement.remove();
+        })
+        .catch((err) => {
+          console.log("Please try AGAIN");
+        });
+    }
+  }
+
+  // edit operation
+  if (e.target.classList.contains("edit-me")) {
+    alert("Edit button clicked");
+  }
+});
