@@ -1,3 +1,62 @@
+class shop {
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+  }
+
+  time() {
+    const now = new Date();
+    console.log(`${now.getHours()}:${now.getMinutes()}`);
+  }
+
+  qoldiq() {
+    this.time();
+    console.log(
+      `Hozirda ${this.non} ta non, ${this.lagmon} ta lagmon va ${this.cola} ta cola mavjud`,
+    );
+  }
+  sotish(product, sotish) {
+    this.time();
+    // 1 - usul
+    // if (product == "non") {
+    //     this.non -= sotish
+    // }
+    // else if (product == "lagmon") {
+    //     this.lagmon -= sotish
+    // }
+    // else if (product == "cola") {
+    //     this.cola -= sotish
+    // } else {
+    //     console.log("malumot kiritishda xato")
+    // }
+    // 2 - usul
+    if (this[product] !== undefined) {
+      this[product] -= sotish;
+      console.log(`${sotish} dona ${[product]} sotildi`);
+    } else {
+      console.log("malumot kiritishda xato");
+    }
+  }
+
+  qabul(product, qabul) {
+    this.time();
+    if (this[product] !== undefined) {
+      this[product] += qabul;
+      console.log(`${qabul} dona ${[product]} qo'shildi`);
+    } else {
+      console.log("malumot kiritishda xato");
+    }
+  }
+}
+
+const myShop = new shop(4, 5, 6);
+//myShop.qoldiq();
+//myShop.sotish("non", 2);
+myShop.sotish("melon", 10);
+//myShop.qabul("cola", 100);
+myShop.qoldiq();
+
 // TASK - C
 /*
 Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin.
@@ -5,57 +64,58 @@ MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta 
 
 @MITASK
 */
-const moment = require("moment");
-class Shop {
-  constructor(bread, lagman, cola) {
-    this.bread = bread;
-    this.lagman = lagman;
-    this.cola = cola;
-  }
-  qoldiq() {
-    const now = new Date();
-    const time = moment(now).format("HH:mm");
-    console.log(
-      `At ${time}, There are ${this.bread} bread, ${this.lagman} lagman and ${this.cola} cola!`,
-    );
-  }
+// const moment = require("moment");
+// class Shop {
+//   constructor(bread, lagman, cola) {
+//     this.bread = bread;
+//     this.lagman = lagman;
+//     this.cola = cola;
+//   }
+//   qoldiq() {
+//     const now = new Date();
+//     const time = moment(now).format("HH:mm");
+//     console.log(
+//       `At ${time}, There are ${this.bread} bread, ${this.lagman} lagman and ${this.cola} cola!`,
+//     );
+//   }
 
-  sell(product, quantity) {
-    if (product === "bread") {
-      this.bread -= quantity;
-    } else if (product === "lagman") {
-      this.lagman -= quantity;
-    } else if (product === "cola") {
-      this.cola -= quantity;
-    } else {
-      console.log("Product not found");
-    }
-    this.qoldiq();
-    const now = new Date();
-    const time = moment(now).format("HH:mm");
-    console.log(`At ${time}, ${quantity} ${product} sold.`);
-  }
+//   sell(product, quantity) {
+//     if (product === "bread") {
+//       this.bread -= quantity;
+//     } else if (product === "lagman") {
+//       this.lagman -= quantity;
+//     } else if (product === "cola") {
+//       this.cola -= quantity;
+//     } else {
+//       console.log("Product not found");
+//     }
+//     this.qoldiq();
+//     const now = new Date();
+//     const time = moment(now).format("HH:mm");
+//     console.log(`At ${time}, ${quantity} ${product} sold.`);
+//   }
 
-  receive(product, quantity) {
-    if (product === "bread") {
-      this.bread += quantity;
-    } else if (product === "lagman") {
-      this.lagman += quantity;
-    } else if (product === "cola") {
-      this.cola += quantity;
-    } else {
-      console.log("Product not found");
-    }
-    const now = new Date();
-    const time = moment(now).format("HH:mm");
-    console.log(`At ${time}, ${quantity} ${product} received.`);
-    this.qoldiq();
-  }
-}
+//   receive(product, quantity) {
+//     if (product === "bread") {
+//       this.bread += quantity;
+//     } else if (product === "lagman") {
+//       this.lagman += quantity;
+//     } else if (product === "cola") {
+//       this.cola += quantity;
+//     } else {
+//       console.log("Product not found");
+//     }
+//     const now = new Date();
+//     const time = moment(now).format("HH:mm");
+//     console.log(`At ${time}, ${quantity} ${product} received.`);
+//     this.qoldiq();
+//   }
+// }
 
-const shop = new Shop(10, 5, 2);
-//shop.sell("bread", 3);
-shop.receive("cola", 4);
+// const shop = new Shop(10, 5, 2);
+// //shop.qoldiq();
+// shop.receive("melon", 12);
+// //shop.receive("cola", 4);
 
 // function countDigits(string) {
 //   let number = 0;

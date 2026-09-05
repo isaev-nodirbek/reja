@@ -53,6 +53,33 @@ document.addEventListener("click", function (e) {
 
   // edit operation
   if (e.target.classList.contains("edit-me")) {
-    alert("Edit button clicked");
+    let userInput = prompt(
+      "Change your plan",
+      e.target.parentElement.parentElement.querySelector(".item-text")
+        .innerHTML,
+    );
+    if (userInput) {
+      axios
+        .post("/edit-item", {
+          id: e.target.getAttribute("data-id"),
+          new_input: userInput,
+        })
+        .then((response) => {
+          console.log(response.data);
+          e.target.parentElement.parentElement.querySelector(
+            ".item-text",
+          ).innerHTML = userInput;
+        })
+        .catch((err) => {
+          console.log("Please try AGAIN");
+        });
+    }
   }
+});
+
+document.getElementById("clean-all").addEventListener("click", function () {
+  axios.post("/delete-all", { delete_all: true }).then((response) => {
+    alert(response.data.state);
+    document.location.reload();
+  });
 });
