@@ -8,7 +8,7 @@ function itemTemplate(item) {
         </span>
         <div>
         <button data-id="${item._id}" class="edit-me btn btn-secondary btn-sm mr-1">
-        Change 
+        Edit 
         </button>
         <button data-id="${item._id}" class="delete-me btn btn-danger btn-sm">Delete</button>
         </div>
@@ -53,22 +53,25 @@ document.addEventListener("click", function (e) {
 
   // edit operation
   if (e.target.classList.contains("edit-me")) {
-    let userInput = prompt(
-      "Change your plan",
-      e.target.parentElement.parentElement.querySelector(".item-text")
-        .innerHTML,
-    );
-    if (userInput) {
+    let itemSpan =
+      e.target.parentElement.parentElement.querySelector(".item-text");
+    let currentText = itemSpan.textContent.trim(); // .trim() barcha ortiqcha bo'shliq va Tab'larni olib tashlaydi
+
+    // Step 1
+    let userInput = prompt("Edit your plan", currentText);
+
+    if (userInput && userInput.trim() !== "") {
+      // Step 2
       axios
         .post("/edit-item", {
           id: e.target.getAttribute("data-id"),
-          new_input: userInput,
+          new_input: userInput.trim(),
         })
+        // Step 5
         .then((response) => {
-          console.log(response.data);
-          e.target.parentElement.parentElement.querySelector(
-            ".item-text",
-          ).innerHTML = userInput;
+          if (response.data.state === "success") {
+            itemSpan.textContent = userInput.trim();
+          }
         })
         .catch((err) => {
           console.log("Please try AGAIN");

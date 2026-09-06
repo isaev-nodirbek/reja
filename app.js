@@ -51,7 +51,6 @@ app.post("/delete-item", (req, res) => {
 app.post("/edit-item", (req, res) => {
   const data = req.body;
   console.log(data);
-  res.end("done");
   db.collection("plans").findOneAndUpdate(
     { _id: new mongodb.ObjectId(data.id) },
     { $set: { reja: data.new_input } },

@@ -1,61 +1,20 @@
-class shop {
-  constructor(non, lagmon, cola) {
-    this.non = non;
-    this.lagmon = lagmon;
-    this.cola = cola;
+// TASK - D
+// Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+// MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+
+function checkContent(str1, str2) {
+  if (str1.length !== str2.length) {
+    return false;
   }
 
-  time() {
-    const now = new Date();
-    console.log(`${now.getHours()}:${now.getMinutes()}`);
-  }
+  const sortedStr1 = str1.split("").sort().join("");
+  const sortedStr2 = str2.split("").sort().join("");
 
-  qoldiq() {
-    this.time();
-    console.log(
-      `Hozirda ${this.non} ta non, ${this.lagmon} ta lagmon va ${this.cola} ta cola mavjud`,
-    );
-  }
-  sotish(product, sotish) {
-    this.time();
-    // 1 - usul
-    // if (product == "non") {
-    //     this.non -= sotish
-    // }
-    // else if (product == "lagmon") {
-    //     this.lagmon -= sotish
-    // }
-    // else if (product == "cola") {
-    //     this.cola -= sotish
-    // } else {
-    //     console.log("malumot kiritishda xato")
-    // }
-    // 2 - usul
-    if (this[product] !== undefined) {
-      this[product] -= sotish;
-      console.log(`${sotish} dona ${[product]} sotildi`);
-    } else {
-      console.log("malumot kiritishda xato");
-    }
-  }
-
-  qabul(product, qabul) {
-    this.time();
-    if (this[product] !== undefined) {
-      this[product] += qabul;
-      console.log(`${qabul} dona ${[product]} qo'shildi`);
-    } else {
-      console.log("malumot kiritishda xato");
-    }
-  }
+  return sortedStr1 === sortedStr2;
 }
 
-const myShop = new shop(4, 5, 6);
-//myShop.qoldiq();
-//myShop.sotish("non", 2);
-myShop.sotish("melon", 10);
-//myShop.qabul("cola", 100);
-myShop.qoldiq();
+const check = checkContent("mitgroup", "gmtiprou");
+console.log(check); // true
 
 // TASK - C
 /*
